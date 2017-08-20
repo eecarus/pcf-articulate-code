@@ -62,9 +62,9 @@ public class AttendeeService {
 		} catch (CloudException e) {
 			logger.debug("Failed to read cloud environment.  Ignore if running locally.");
 		}
-		if(!this.uri.contains("/attendees")){
-			throw new RuntimeException("The attendee-service uri must have '/attendees' in the path.  For example: " + DEFAULT_ATTENDEE_SERVICE_URI);
-		}
+	//	if(!this.uri.contains("/attendees")){
+	//		throw new RuntimeException("The attendee-service uri must have '/attendees' in the path.  For example: " + DEFAULT_ATTENDEE_SERVICE_URI);
+	//	}
 		if(this.uri.equals(DEFAULT_ATTENDEE_SERVICE_URI)){
 			logger.info("Defaulting attendee-service uri to: {}", DEFAULT_ATTENDEE_SERVICE_URI);
 		}
